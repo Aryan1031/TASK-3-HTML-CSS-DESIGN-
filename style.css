@@ -1,7 +1,8 @@
 .but1{
     position:relative;
-    left:39.5%;
-    top:300px;
+    display:block;
+        margin:auto;
+    top:82%;
     border:none;
     border-radius:30px;
     font-size: 50px;
@@ -9,10 +10,10 @@
     opacity:80%;
     
 }
-.but2{
-    position:relative;
-    left:21%;
-    top:85%;
+.but2{position:relative;
+    display:block;
+        margin:auto;
+    top:119%;
     border:none;
     border-radius:30px;
     font-size: 50px;
@@ -20,10 +21,10 @@
     opacity:80%;
     
 }
-.but3{
-    position:relative;
-    left:7%;
-    top:98%;
+.but3{position:relative;
+    display:block;
+    margin:auto;
+    top:131%;
     border:none;
     border-radius:30px;
     font-size: 50px;
@@ -76,4 +77,10 @@ color:aqua;
         color:white;
         padding:10%;
         margin:30% 10% 5% 25%;
+    }
+    #p1d{
+        position:relative;
+        display:block;
+        margin:auto;
+        top:72%;
     }

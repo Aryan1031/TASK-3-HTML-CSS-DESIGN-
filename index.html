@@ -8,35 +8,94 @@
         <button type="😃 NEW GAME" class="but1">😃NEW GAME</button> 
         <button type="🎲 Roll DICE" class="but2">🎲 Roll DICE</button> 
         <button type="🚩 HOLD" class="but3">🚩HOLD</button> 
+        <img src="d1.png" id="p1d">;
             <div class="f">
                 
                     
                 <div class="f1">  
                              
                    Player 1
-                   <div class="f11">
+                   <div class="f11" id="actual--0">
                     0
                    </div>
                    
         
-                   <div class="f3">
+                   <div class="f3"> 
                     current
-                    <div class="f4">
+                    <div class="f4" id="current--0" >
                         0
                     </div>
                 </div>
                 </div>
                     <div class="f2">
                 Player 2
-                <div class="f22">
+                <div class="f22" id="actual--1">
                 0
                 </div>
                 <div class="f5">
                     current
-                    <div class="f6">
+                    <div class="f6" id="current--1">
                         0
                     </div>
                 </div></div>
 </div>
+<script>
+   /* let p1currsc=0;
+    let p2currsc=0;
+    letp1acsc=0;
+    letp2acsc=0;*/
+
+    const btn1= document.querySelector('.but1');
+    const btn2= document.querySelector('.but2');
+    const btn3= document.querySelector('.but3');
+    const p1actual=document.querySelector('.f11');
+    const p1current=document.querySelector('.f4');
+    const p2actual=document.querySelector('.f22');
+    const p2current=document.querySelector('.f5');
+    
+
+
+    let scores=[0,0];
+    let actualscore=0;
+    let currentscore=0;
+    
+    let activePlayer=0;
+    //scores[activePlayer]
+
+    
+    btn2.addEventListener("click", function(){
+        let number=Math.floor(Math.random()*6)+1;
+            document.getElementById("p1d").src=`d${number}.png`;  
+            if(number!=1){
+               
+                 actualscore+=number;
+                 currentscore=number;
+                document.getElementById(`actual--${activePlayer}`).textContent = actualscore;
+                document.getElementById(`current--${activePlayer}`).textContent = currentscore;
+                }
+                
+                else{
+                    actualscore=0;
+                    currentscore=0;
+                    document.getElementById(`actual--${activePlayer}`).textContent = actualscore;
+                    document.getElementById(`current--${activePlayer}`).textContent = currentscore;
+                    activePlayer = activePlayer === 0? 1 : 0;
+                }
+               
+
+              /*  p1acsc= p1currsc+ play1;
+                p1currsc=p1acsc;
+                p1actual.innerHTML=`${p1acsc}`;
+                
+            
+            if(number==1){
+                p1currsc=0;
+                p1acsc=0;
+                p1actual.innerHTML=`${p1acsc}`;
+                p1current.innerHTML=`${p1currsc}`;
+
+            } */
+    })
+</script>
     </body>
 </html>
